@@ -5,6 +5,8 @@ them among restaurants.
 
 This project holds all the necessary components to achieve this goal.
 
+[Code repository][2]
+
 ## Tech stack
 
 -   Express
@@ -76,3 +78,4 @@ The function works in the following way
 3. Finally a random eater of each group is selected as its leader
 
 [1]: https://jestjs.io/
+[2]: https://github.com/GabrielaBenalcazar/cabify
