@@ -5,13 +5,13 @@ const Restaurant = require("../models/Restaurant.model");
 const createGroups = require("../utils/createGroups");
 
 router.post("/create_groups", (req, res, next) => {
-    const { groupIndex } = req.body;
+    const { groupSize } = req.body;
     const eaters = Eater.find();
     const restaurants = Restaurant.find();
 
     Promise.all([eaters, restaurants])
         .then(([eaters, restaurants]) => {
-            const groups = createGroups(eaters, restaurants, groupIndex);
+            const groups = createGroups(eaters, restaurants, groupSize);
             console.log(groups);
 
             return Group.create(groups);

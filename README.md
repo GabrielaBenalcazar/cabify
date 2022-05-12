@@ -54,11 +54,11 @@ parameter that can be included when creating groups, overriding the default of
 #### `createGroups`
 
 The function `createGroups` takes three arguments: `eaters`, `restaurants`
-and `groupIndex` .
+and `groupSize` .
 
 -   eaters: an array of eaters
 -   restaurants: an array restaurants
--   groupIndex (optional): maximum group size
+-   groupSize (optional): maximum group size
 
 The function works in the following way
 
