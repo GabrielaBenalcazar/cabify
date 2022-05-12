@@ -39,17 +39,15 @@ parameter that can be included when creating groups, overriding the default of
 
 ### Routes
 
-| Route               | Description                                                     |
-| ------------------- | --------------------------------------------------------------- |
-| POST /eaters        | Creates a new Eater                                             |
-| GET /eaters         | Returns a list of all the eaters                                |
-| DELETE /eaters      | Removes all the eaters and restaurants registered in the system |
-| ---                 | ---                                                             |
-| POST /restaurants   | Creates a new Restautant                                        |
-| GET /restaurants    | Returns a list of all the eaters                                |
-| ---                 | ---                                                             |
-| POST /create_groups | Creates a new Group                                             |
-| GET /create_groups  | Returns a list of all the Gropus                                |
+| Route                 | Description                                                     |
+| --------------------- | --------------------------------------------------------------- |
+| `POST /eaters`        | Creates a new Eater                                             |
+| `GET /eaters`         | Returns a list of all the eaters                                |
+| `DELETE /eaters`      | Removes all the eaters and restaurants registered in the system |
+| `POST /restaurants`   | Creates a new Restautant                                        |
+| `GET /restaurants`    | Returns a list of all the eaters                                |
+| `POST /create_groups` | Creates a new Group                                             |
+| `GET /create_groups`  | Returns a list of all the Gropus                                |
 
 ### Utils
 
