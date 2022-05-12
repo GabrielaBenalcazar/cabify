@@ -17,9 +17,9 @@ Below are some features of this project that were not in the main requirements
 
 ### Extensive unit tests
 
-Since the core funcionality (creating the groups) is quite complex, unit tests
-have been written to ensure that all edge cases are covered. The tests have
-been written using the [jest][1] framework.
+Since the core functionality (creating the groups) is quite complex, unit
+testshave been written to ensure that all edge cases are covered. The tests
+have been written using the [jest][1] framework.
 
 ### Variable group size
 

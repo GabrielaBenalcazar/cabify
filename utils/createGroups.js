@@ -2,15 +2,21 @@
  * divides eaters among restaurants
  * @param eaters array of ids
  * @param restaurants array of ids
+ * @param _maxGroupSize (Optional): maximum group size
  * @returns created groups
  */
 
-const createGroups = (eaters, restaurants,groupIndex) => {
+const createGroups = (eaters, restaurants, _maxGroupSize) => {
+    const maxGroupSize = _maxGroupSize === undefined ? 7 : _maxGroupSize;
     const nRestaurants = restaurants.length;
 
+    if (maxGroupSize === undefined) {
+        maxGroupSize = 7;
+    }
+
     // The number of groups necessary to ensure that group size is maximized
-    // while staying at or below 7
-    const nGroups = Math.ceil(eaters.length / groupIndex);
+    // while staying at or below the maxGroupSize
+    const nGroups = Math.ceil(eaters.length / maxGroupSize);
 
     // Create the necessary groups
     let groups = [];
@@ -56,5 +62,3 @@ const createGroups = (eaters, restaurants,groupIndex) => {
 };
 
 module.exports = createGroups;
-
-
