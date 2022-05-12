@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Eater = require("../models/Eater.model");
+const Group = require("../models/Group.model");
 const Restaurant = require("../models/Restaurant.model");
 
 router.post("/eaters", (req, res, next) => {
@@ -28,8 +29,12 @@ router.delete("/eaters", (req, res, next) => {
             return Restaurant.deleteMany();
         })
         .then(() => {
+            return Group.deleteMany();
+        })
+
+        .then(() => {
             return res.json({
-                message: "eaters and restaurants removed",
+                message: "eaters,groups, and restaurants removed",
             });
         })
         .catch((err) => res.json({ err }));

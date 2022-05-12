@@ -1,7 +1,7 @@
 {
     "arrowParens": "always",
     "endOfLine": "lf",
-    "printWidth": 80,
+    "printWidth": 150,
     "quoteProps": "consistent",
     "tabWidth": 4
 }

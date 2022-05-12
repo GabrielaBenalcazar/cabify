@@ -13,23 +13,7 @@ test("2 personas 1 restaurante - un grupo de 2", () => {
     expect(groups[0].restaurant).toBe("x");
 });
 test("los grupos no sean mayores de 7", () => {
-    const people = [
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-    ];
+    const people = ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a"];
     const restaurants = ["x", "y", "z"];
     const groupIndex = 7;
     const groups = createGroups(people, restaurants, groupIndex);

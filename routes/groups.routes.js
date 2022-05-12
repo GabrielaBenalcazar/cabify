@@ -9,7 +9,14 @@ router.post("/create_groups", (req, res, next) => {
     const eaters = Eater.find();
     const restaurants = Restaurant.find();
 
-    Promise.all([eaters, restaurants])
+    Group.find()
+        .then((groups) => {
+            if (groups.length > 0) {
+                res.json({ message: "groups already created" });
+            } else {
+                return Promise.all([eaters, restaurants]);
+            }
+        })
         .then(([eaters, restaurants]) => {
             const groups = createGroups(eaters, restaurants, groupSize);
             console.log(groups);
@@ -27,7 +34,7 @@ router.post("/create_groups", (req, res, next) => {
             });
             res.json(allGroups);
         })
-        .catch((err) => res.json({ message: "groups already created" }));
+        .catch((err) => res.json({ message: "groups not created" }));
 });
 
 router.get("/create_groups", (req, res, next) => {
